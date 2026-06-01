@@ -1,0 +1,13 @@
+<biblioteca>
+    <libro id="1">
+        <titulo>El nombre del viento</titulo>
+        <autor id="a1">Patrick Rothfuss</autor>
+        <anio>2007</anio>
+        <genero>Fantasía</genero>
+        <descripcion>...</descripcion>
+    </libro>
+    <autor id="a1">
+        <nombre>Patrick Rothfuss</nombre>
+        <nacionalidad>Estadounidense</nacionalidad>
+    </autor>
+</biblioteca>
