@@ -4,10 +4,15 @@
         <autor id="a1">Patrick Rothfuss</autor>
         <anio>2007</anio>
         <genero>Fantasía</genero>
-        <descripcion>...</descripcion>
+        <descripcion>Un libro que trata sobre...</descripcion>
     </libro>
+
     <autor id="a1">
         <nombre>Patrick Rothfuss</nombre>
         <nacionalidad>Estadounidense</nacionalidad>
+    </autor>
+    <autor id="a2">
+        <nombre>George Orwell</nombre>
+        <nacionalidad>Inglés</nacionalidad>
     </autor>
 </biblioteca>

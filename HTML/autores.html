@@ -4,8 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel = "stylesheet" href="/ordinario-ftw/CSS/estilos_autores.css">
 </head>
 <body>
-    
+    <section id="seccion-autores">
+        <div id="table-section">
+            <h2>Autores</h2>
+            <table id="tabla-autores">
+                <thead>
+                    <tr>
+                    <th>Nombre</th>
+                    <th>Nacionalidad</th>
+                </tr>
+                </thead>
+                <tbody id="cuerpo-tabla">
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="formulario-section">
+        <h3>Añadir nuevo autor</h3>
+        <form id="formulario-nuevo-actor">
+            <label for="nombre:">Nombre del autor:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <p></p>
+
+            <label for="nacionalidad">Nacionalidad del autor:</label>
+            <input type="text" name="nacionalidad" id="nacionalidad" required>
+            <p></p>
+
+            <button type="button" onclick="agregarAutor()">Guardar autor</button>
+        </form>
+        
+    </section>
+
+    <section id="south-section">
+        <div id="footer-section">
+            <a href="/ordinario-ftw/index.html"> <button id="regresar">Regresar</button> </a>
+            <button id="btn-limpiar" onclick="limpiarAutores()">Limpiar lista de autores</button>
+        </div>
+
+    </section>
+
+    <script src="/ordinario-ftw/Javascript/autores_js.js"></script>
 </body>
 </html>

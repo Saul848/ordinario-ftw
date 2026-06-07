@@ -27,3 +27,18 @@
     background-color: #6f6e8f;
     padding: 20px;
 }
+
+.banner-inicio{
+    width: 100%;
+    height: 100px;
+    background-color: #6f6e8f;
+    background-image: url('imagenes/banner_imagen.png');
+    background-size: cover;        /* Cubre todo el div */
+    background-position: center;   /* Centra la imagen */
+}
+
+#footer-section {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
