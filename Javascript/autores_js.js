@@ -1,12 +1,12 @@
-
 fetch('../XML/biblioteca.xml')
-    .then(response => response.text())
-    .then(str => {
-        const parser = new DOMParser();
-        const xmlBiblioteca = parser.parseFromString(str, "text/xml");
+.then(response => response.text())
+.then(str => {
+    const parser = new DOMParser();
+    const xmlBiblioteca = parser.parseFromString(str, "text/xml");
 
-        llenarTablaAutores(xmlBiblioteca);
-    });
+    llenarTablaAutores(xmlBiblioteca);
+});
+
 
 function llenarTablaAutores(biblioteca){
     const cuerpoTabla = document.getElementById('cuerpo-tabla');
@@ -47,6 +47,18 @@ function agregarAutor(){
     if (nombreInput === "" || nacionalidadInput === "") {
         alert("Por favor, completa ambos campos.");
         return; 
+    }
+
+    //Validación de existencia en localStorage o en archivo xml
+    let listaLocales = JSON.parse(localStorage.getItem('misAutores')) || [];
+
+    const nombreNormalizado = nombreInput.toLowerCase();
+    
+    const estaEnLocal = listaLocales.some(autor => autor.nombre.toLowerCase() === nombreNormalizado);
+
+    if (estaEnLocal) {
+        alert("¡Error! Este autor ya existe en la biblioteca");
+        return;
     }
 
     //Lista de autores existentes en localStorage

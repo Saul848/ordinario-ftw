@@ -4,7 +4,14 @@
         <autor id="a1">Patrick Rothfuss</autor>
         <anio>2007</anio>
         <genero>Fantasía</genero>
-        <descripcion>Un libro que trata sobre...</descripcion>
+        <descripcion>La obra se desarrolla en un mundo fantástico y narra la historia de Kvothe, arcanista, asesino, enamorado, músico, estudiante y aventurero; y de cómo se convirtió en un personaje legendario. Usando el nombre de Kote para ocultar su verdadera identidad, regenta una apartada posada llamada Roca de Guía, acompañado de su discípulo Bast. Un día les visita Devan Lochees, un escribano conocido como “Cronista”, interesado en escribir las biografías de las figuras más importantes de su tiempo, quien intenta convencerle para que revele su verdadera historia. Kvothe accede, con la condición de hacerlo en tres días.</descripcion>
+    </libro>
+    <libro id="2">
+        <titulo>Rebelión en la granja</titulo>
+        <autor id="a2">George Orwell</autor>
+        <anio>1945</anio>
+        <genero>Sátira</genero>
+        <descripcion>La obra relata cómo los animales de una granja se rebelan contra su dueño humano para crear una sociedad justa e igualitaria, pero terminan bajo una tiranía aún peor...</descripcion>
     </libro>
 
     <autor id="a1">

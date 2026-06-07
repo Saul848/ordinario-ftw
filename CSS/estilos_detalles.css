@@ -1,0 +1,29 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f7f6;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.detalle-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 { color: #2c3e50; margin-top: 0; }
+.etiqueta { color: #e67e22; font-weight: bold; } /* Color naranja para etiquetas */
+
+.btn-volver {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}

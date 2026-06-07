@@ -1,0 +1,26 @@
+#tabla-libros {
+    width: 100%;
+    border-collapse: collapse; /* Elimina espacios entre celdas */
+    margin-top: 20px;
+}
+
+#tabla-libros th, #tabla-libros td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#tabla-libros th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+#tabla-libros tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#footer-section {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
