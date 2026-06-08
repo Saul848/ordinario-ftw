@@ -34,6 +34,7 @@ function llenarTablaLibros(biblioteca){
     }
 }
 
+//Función para agregar los elementos necesarios a la tabla de libros
 function agregarFilaATabla(libro, titulo, genero, autor,anio) {
     const cuerpoTabla = document.getElementById('cuerpo-tabla');
     const fila = document.createElement('tr');
@@ -43,15 +44,19 @@ function agregarFilaATabla(libro, titulo, genero, autor,anio) {
         <td>${genero}</td>
         <td>${autor}</td>
         <td>${anio}</td>
-        <td>
-            <button onclick="window.location.href='detalle_libro.html?id=${libro.getAttribute('id')}'">
+        <td class="acciones-container">
+            <button class="btn-detalles" onclick="window.location.href='detalle_libro.html?id=${libro.getAttribute('id')}'">
                 Ver detalles
+            </button>
+            <button class="btn-favorito" onclick="marcarFavorito('${libro.getAttribute('id')}')">
+                ❤️ Favorito
             </button>
         </td>
     `;
     cuerpoTabla.appendChild(fila);
 }
 
+//ordenamiento de mayor a menor
 function ordenarPorAnio(){
     if (!xmlBiblioteca) {
         alert("El archivo XML aún se está cargando. Por favor, espera.");
@@ -83,6 +88,7 @@ function ordenarPorAnio(){
     });
 }
 
+//Ordenamiento de menor a mayor
 function ordenarPorAnio2(){
     if (!xmlBiblioteca) {
         alert("El archivo XML aún se está cargando. Por favor, espera.");
@@ -112,4 +118,32 @@ function ordenarPorAnio2(){
         
         agregarFilaATabla(nodoSimulado, libro.titulo, libro.genero, libro.autor, libro.anio);
     });
+}
+
+function marcarFavorito(idLibro) {
+    const botonFav = document.getElementsByClassName("btn-favorito")
+    
+    const usuarioActual = localStorage.getItem('usuarioActivo'); //usuario
+    
+    if (!usuarioActual) {
+        alert("Debes iniciar sesión para guardar favoritos.");
+        return;
+    }
+
+    // Traer todos los favoritos o crear un objeto vacío si no existe
+    let todosLosFavoritos = JSON.parse(localStorage.getItem('misFavoritos')) || {};
+
+    //Si este usuario aún no tiene lista, le creamos un arreglo vacío
+    if (!todosLosFavoritos[usuarioActual]) {
+        todosLosFavoritos[usuarioActual] = [];
+    }
+
+    //Agregar el libro si no lo tiene repetido
+    if (!todosLosFavoritos[usuarioActual].includes(idLibro)) {
+        todosLosFavoritos[usuarioActual].push(idLibro);
+        localStorage.setItem('misFavoritos', JSON.stringify(todosLosFavoritos));
+        alert("¡Añadido a tus favoritos!");
+    } else {
+        alert("Este libro ya estaba en tus favoritos.");
+    }
 }

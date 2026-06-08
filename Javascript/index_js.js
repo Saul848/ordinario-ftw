@@ -25,11 +25,12 @@ function iniciarSesion() {
 
             //Validaracceso
             if (estaEnXML) {
+                localStorage.setItem('usuarioActivo', nombre);
                 // Redirigimos a la página principal
                 window.location.href = 'HTML/inicio.html'; 
             } else {
                 // Si no coincide, mostramos error
-                mensajeError.style.display = 'block';
+                msjError.style.display = 'block';
             }
         })
         .catch(error => console.error("Error al cargar XML:", error));

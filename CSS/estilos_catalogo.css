@@ -24,3 +24,92 @@
     bottom: 0;
     width: 100%;
 }
+
+/* Contenedor para alinear los botones perfectamente */
+.acciones-container {
+    display: flex;
+    gap: 10px; /* Espacio entre ambos botones */
+    justify-content: center;
+}
+
+/* Base general para ambos botones (para no repetir código) */
+.btn-detalles, .btn-favorito {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease; /* Hace que los cambios de color sean suaves */
+    display: inline-flex;
+    align-items: center;
+    gap: 5px; /* Espacio entre el ícono/emoji y el texto */
+}
+
+/* --- ESTILOS: BOTÓN VER DETALLES (Azul Elegante) --- */
+.btn-detalles {
+    background-color: #f0f4f8;
+    color: #1e40af;
+    border: 1px solid #dbeafe;
+}
+
+.btn-detalles:hover {
+    background-color: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
+}
+
+/* --- ESTILOS: BOTÓN FAVORITO (Rojo Pasión) --- */
+.btn-favorito {
+    background-color: #fff1f2;
+    color: #e11d48;
+    border: 1px solid #ffe4e6;
+}
+
+.btn-favorito:hover {
+    background-color: #e11d48;
+    color: white;
+    border-color: #e11d48;
+    box-shadow: 0 4px 6px rgba(225, 29, 72, 0.2);
+}
+
+/* Efecto de "presionado" para ambos botones */
+.btn-detalles:active, .btn-favorito:active {
+    transform: scale(0.95); /* El botón se encoge un poquito al hacer clic */
+}
+
+
+/*
+    Panel sur de los botones
+*/
+
+#footer-section p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+#footer-section a {
+    text-decoration: none;
+}
+
+/* Botones del footer */
+#footer-section button {
+    background-color: #334155;
+    color: #f8fafc;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#footer-section button:hover {
+    background-color: #475569;
+}

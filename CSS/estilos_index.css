@@ -1,0 +1,84 @@
+/* Reseteo básico y fuente general */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef;
+    margin: 0;
+    height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+/* La tarjeta del formulario */
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Título */
+.login-container h2 {
+    color: #333333;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* Etiquetas (Labels) */
+.login-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    color: #555555;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Campos de texto y contraseña */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Evita que el padding desborde el ancho */
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+/* Efecto cuando el usuario hace clic en el input */
+.login-container input[type="text"]:focus,
+.login-container input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Botón de entrar */
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto al pasar el ratón por encima del botón */
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Mensaje de error */
+#mensaje-error {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}

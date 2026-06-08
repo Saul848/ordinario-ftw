@@ -1,0 +1,129 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc; /* Gris azulado muy claro */
+    color: #334155;
+    margin: 0;
+    padding: 0;
+}
+
+.favoritos-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.favoritos-header {
+    margin-bottom: 30px;
+}
+
+.favoritos-header h1 {
+    color: #0f172a; /* Azul pizarra oscuro */
+    font-size: 2.2rem;
+    margin: 15px 0 5px 0;
+}
+
+.favoritos-header p {
+    color: #64748b;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Botón Volver */
+.btn-volver {
+    display: inline-block;
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.btn-volver:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+#mensaje-estado h2 {
+    background-color: #ffffff;
+    border-left: 4px solid #64748b;
+    padding: 20px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    color: #475569;
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.tabla-responsiva {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    overflow: hidden; /* Mantiene los bordes redondeados en las esquinas */
+}
+
+.tabla-favoritos {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+/* Encabezados de la tabla */
+.tabla-favoritos th {
+    background-color: #0f172a; /* Fondo oscuro a juego con el inicio */
+    color: #ffffff;
+    padding: 16px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* Celdas del cuerpo */
+.tabla-favoritos td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+    font-size: 15px;
+}
+
+/* Títulos de los libros resaltados */
+.tabla-favoritos td h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* Fila interactiva al pasar el mouse */
+.tabla-favoritos tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Clases utilitarias */
+.texto-centro {
+    text-align: center;
+}
+
+.tabla-favoritos button {
+    background-color: #f0f4f8;
+    color: #1e40af;
+    border: 1px solid #dbeafe;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tabla-favoritos button:hover {
+    background-color: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
+}
+
+.tabla-favoritos button:active {
+    transform: scale(0.97);
+}

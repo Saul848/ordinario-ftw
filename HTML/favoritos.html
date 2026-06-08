@@ -1,11 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Favoritos</title>
+    <link rel="stylesheet" href="/ordinario-ftw/CSS/estilos_favoritos.css">
 </head>
 <body>
-    
+
+    <main class="favoritos-container">
+        <header class="favoritos-header">
+            <a href="../HTML/inicio.html" class="btn-volver">← Volver al Inicio</a>
+            <h1>📚 Mis Libros Favoritos</h1>
+            <p>Tu colección personalizada de lecturas guardadas</p>
+        </header>
+        
+        <div id="mensaje-estado"></div>
+
+        <div class="tabla-responsiva">
+            <table class="tabla-favoritos">
+                <thead>
+                    <tr>
+                        <th>Título del Libro</th>
+                        <th>Autor</th>
+                        <th class="texto-centro">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpo-tabla-favoritos">
+                    </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="../Javascript/favoritos_js.js"></script>
 </body>
 </html>

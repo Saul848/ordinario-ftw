@@ -1,21 +1,3 @@
-.mi-input{
-    padding: 12px 15px;
-
-    font-size: 18px;
-
-    width: 800px;
-    max-width: 1000px;
-
-    border: 2px solid #083e62;
-    border-radius: 18px;
-    outline: none;
-}
-
-.mi-input:focus{
-    border-color: #458fc1;
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
-}
-
 .button-catalog{
     font-size: 14px;
     background-color: #6f6e8f;
@@ -41,4 +23,198 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+#cabecera {
+    background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+#cabecera h1 {
+    font-size: 2.8rem;
+    margin: 0 0 10px 0;
+    letter-spacing: -0.025em;
+}
+
+#cabecera p {
+    font-size: 1.2rem;
+    color: #93c5fd;
+    margin: 0 0 25px 0;
+}
+
+
+#paginas {
+    flex: 1; 
+    max-width: 1000px;
+    margin: 40px auto;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Contenedor de los botones principales */
+#contenedor_paginas {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; 
+    margin-bottom: 30px;
+}
+
+#contenedor_paginas a {
+    text-decoration: none; 
+}
+
+/* Botones del catálogo, autores y favoritos */
+.button-catalog {
+    background-color: #ffffff;
+    color: #1e293b;
+    border: 1px solid #e2e8f0;
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    transition: all 0.2s ease;
+}
+
+.button-catalog:hover {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.button-catalog:active {
+    transform: translateY(0);
+}
+
+.banner-inicio {
+    background-color: #ffffff;
+    border-left: 5px solid #3b82f6;
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #1e293b;
+}
+
+/*
+    Sección footer sur
+*/
+#contactos {
+    background-color: #0f172a;
+    color: #94a3b8;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+#footer-section p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+#footer-section a {
+    text-decoration: none;
+}
+
+/* Botones del footer */
+#footer-section button {
+    background-color: #334155;
+    color: #f8fafc;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#footer-section button:hover {
+    background-color: #475569;
+}
+
+#cerrar-sesion {
+    background-color: #1e293b !important;
+    color: #f1f5f9 !important;
+    border: 1px solid #334155 !important;
+}
+
+#cerrar-sesion:hover {
+    background-color: #ef4444 !important;
+    color: #ffffff !important;
+    border-color: #ef4444 !important;
+}
+
+/* 
+    Media queries (600px)
+*/
+@media (max-width: 600px) {
+    #cabecera {
+        padding: 40px 15px;
+    }
+
+    #cabecera h1 {
+        font-size: 1.9rem; 
+    }
+
+    #cabecera p {
+        font-size: 1rem;
+    }
+
+    #contenedor_paginas {
+        flex-direction: column;
+        align-items: stretch; 
+        gap: 12px;
+    }
+
+    #contenedor_paginas a {
+        width: 100%; 
+    }
+
+    .button-catalog {
+        width: 100%; 
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .banner-inicio {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    #footer-section p {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+    
+    #footer-section button {
+        width: 80%; 
+        padding: 10px;
+    }
 }
