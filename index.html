@@ -1,44 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblioteca digital</title>
-    <link rel = "stylesheet" href="CSS/estilos_inicio.css">
+    <title>Iniciar Sesión</title>
 </head>
 <body>
-    <section id="cabecera">
-        <h1>Bienvenidos a la biblioteca a Bavel</h1>
-        <input type="text" id="busqueda" class="mi-input" placeholder="Buscar"></input>
-        <p>Exclusiva selección de libros para todas las edades</p>
-    </section>
+    <div class="login-container">
+        <h2>Bienvenido a la Biblioteca de Bavel</h2>
+        
+        <label for="nombre">Nombre de Usuario:</label>
+        <input type="text" id="nombre" placeholder="Ej. Carlos Perez">
+        
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" placeholder="Tu contraseña">
+        
+        <button onclick="iniciarSesion()">Entrar</button>
+        <p id="mensaje-error" style="color: red; display: none;">Credenciales incorrectas.</p>
+    </div>
 
-    <section id="paginas">
-        <div id="contenedor_paginas">
-            <a href="html/catalogo.html">
-                <button id="Catalogo" class="button-catalog">Catalogo</button>
-            </a>
-            <a href="html/autores.html">
-                <button id="Autores" class="button-catalog">Autores</button>
-            </a>
-            <a href="html/favoritos.html">
-                <button id="Favoritos" class="button-catalog">Favoritos</button>
-            </a>
-            <a href="html/estadisticas.html">
-                <button id="Estadísticas" class="button-catalog">Estadísticas</button>
-            </a>
-            
-        </div>
-        <div id="bienvenida" class="banner-inicio">
-            
-        </div>
-    </section>
-
-    <section id="contactos">
-        <div id="footer-section">
-            <p>Información de contacto: <a href="html/contacto.html">dueño@uv.mx</a></p>
-            
-        </div>
-    </section>
+    <script src="Javascript/index_js.js"></script>
 </body>
 </html>

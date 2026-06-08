@@ -13,6 +13,13 @@
         <genero>Sátira</genero>
         <descripcion>La obra relata cómo los animales de una granja se rebelan contra su dueño humano para crear una sociedad justa e igualitaria, pero terminan bajo una tiranía aún peor...</descripcion>
     </libro>
+    <libro id="3">
+        <titulo>Alicia en el país de las maravillas</titulo>
+        <autor id="a3">Lewis Carroll</autor>
+        <anio>1865</anio>
+        <genero>Fantasía</genero>
+        <descripcion>Mientras está aburrida junto a su hermana leyendo un libro, Alicia ve a un Conejo Blanco que viste chaleco y corre apresuradamente mirando un reloj de bolsillo. Llena de curiosidad, lo persigue hasta su madriguera y cae por un profundo agujero. Al aterrizar, se encuentra en un universo fantástico donde vive una serie de aventuras.</descripcion>
+    </libro>
 
     <autor id="a1">
         <nombre>Patrick Rothfuss</nombre>
@@ -22,4 +29,19 @@
         <nombre>George Orwell</nombre>
         <nacionalidad>Inglés</nacionalidad>
     </autor>
+    <autor id="a3">
+        <nombre>Lewis Carroll</nombre>
+        <nacionalidad>Inglés</nacionalidad>
+    </autor>
+
+    <usuarios>
+        <usuario id="u1">
+            <nombre>Carlos Perez</nombre>
+            <password>contra123</password>
+        </usuario>
+        <usuario id="u2">
+            <nombre>Ana Martinez</nombre>
+            <password>segura123</password>
+        </usuario>
+    </usuarios>
 </biblioteca>
