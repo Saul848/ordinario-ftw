@@ -1,3 +1,4 @@
+//Función para iniciar sesión y cargar el usuario al localStorage para poder asociar cualquier elemento dinamico a él
 function iniciarSesion() {
     const nombre = document.getElementById('nombre').value;
     const contra = document.getElementById('password').value;
@@ -14,7 +15,7 @@ function iniciarSesion() {
             const parser = new DOMParser();
             const xmlBiblioteca = parser.parseFromString(data, "application/xml");
             
-            // 3. Buscar en los usuarios del XML
+            // buscar en los usuarios del XML
             const usuariosXML = Array.from(xmlBiblioteca.getElementsByTagName('usuario'));
             const estaEnXML = usuariosXML.find(user => {
                 const nombreXML = user.getElementsByTagName('nombre')[0].textContent;
@@ -26,7 +27,7 @@ function iniciarSesion() {
             //Validaracceso
             if (estaEnXML) {
                 localStorage.setItem('usuarioActivo', nombre);
-                // Redirigimos a la página principal
+                // Redirección a la página principal
                 window.location.href = 'HTML/inicio.html'; 
             } else {
                 // Si no coincide, mostramos error

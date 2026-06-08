@@ -1,0 +1,20 @@
+<!ELEMENT biblioteca (libro+, autor+, usuarios)>
+
+<!ELEMENT libro (titulo, autor, anio, genero, descripcion)>
+<!ATTLIST libro id ID #REQUIRED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ATTLIST autor id IDREF #REQUIRED>
+<!ELEMENT anio (#PCDATA)>
+<!ELEMENT genero (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+
+<!ELEMENT autor (nombre, nacionalidad)>
+<!ATTLIST autor id ID #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT nacionalidad (#PCDATA)>
+
+<!ELEMENT usuarios (usuario+)>
+<!ELEMENT usuario (nombre, password)>
+<!ATTLIST usuario id ID #REQUIRED>
+<!ELEMENT password (#PCDATA)>

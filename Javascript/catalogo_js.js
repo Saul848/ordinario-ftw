@@ -1,5 +1,10 @@
+//Variable local del archivo xml
 let xmlBiblioteca = null;
 
+/*
+    Función que se carga en automatico cuando la pagina es cargada, en este caso
+    le asigna el valor real a la variable global del archivo xml
+*/
 window.onload = function(){
     fetch('../XML/biblioteca.xml')
     .then(response => response.text())
@@ -12,7 +17,7 @@ window.onload = function(){
 }
 
 
-
+//Función para llenar la tabla de libros con el archivo xml (similar a la de autores)
 function llenarTablaLibros(biblioteca){
     const cuerpoTabla = document.getElementById('cuerpo-tabla');
     cuerpoTabla.innerHTML = '';
@@ -120,6 +125,7 @@ function ordenarPorAnio2(){
     });
 }
 
+//Funcion para marcar un libro como favorito y asociarlo con el ID de un usuario especifico
 function marcarFavorito(idLibro) {
     const botonFav = document.getElementsByClassName("btn-favorito")
     

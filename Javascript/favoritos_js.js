@@ -1,9 +1,10 @@
+//Al cargar la pagina nos aseguramos de que se llene la tabla con los favoritos del usuario que accedió
 window.onload = function() {
     const usuarioActual = localStorage.getItem('usuarioActivo');
     const contenedorMensaje = document.getElementById('mensaje-estado');
     const cuerpoTabla = document.getElementById('cuerpo-tabla-favoritos');
 
-    // Validación de seguridad
+    // Validación de seguridad (si se inicio sesión)
     if (!usuarioActual) {
         contenedorMensaje.innerHTML = "<h2>Por favor, inicia sesión para ver tus favoritos.</h2>";
         return;
@@ -26,12 +27,12 @@ window.onload = function() {
             const xml = parser.parseFromString(data, "application/xml");
             const librosXML = Array.from(xml.getElementsByTagName('libro'));
 
-            // Aquí ocurre la magia: filtramos los libros cuyo ID está en la lista del usuario
+            // filtramos los libros que tengan un ID está en la lista del usuario
             const librosFavoritos = librosXML.filter(libro => 
                 misLibrosIds.includes(libro.getAttribute('id'))
             );
 
-            // Pintar la tabla
+            // pintar la tabla
             librosFavoritos.forEach(libro => {
                 const titulo = libro.getElementsByTagName('titulo')[0].textContent;
                 const autor = libro.getElementsByTagName('autor')[0].textContent;

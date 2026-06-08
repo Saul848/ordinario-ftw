@@ -1,3 +1,4 @@
+//Método para recuperar el xml del proyecto
 fetch('../XML/biblioteca.xml')
 .then(response => response.text())
 .then(str => {
@@ -7,7 +8,7 @@ fetch('../XML/biblioteca.xml')
     llenarTablaAutores(xmlBiblioteca);
 });
 
-
+//Función para construir la tabla de autores en base a los datos del archivo xml
 function llenarTablaAutores(biblioteca){
     const cuerpoTabla = document.getElementById('cuerpo-tabla');
     cuerpoTabla.innerHTML = '';
@@ -33,6 +34,7 @@ function llenarTablaAutores(biblioteca){
     });
 }
 
+//Función para construir las filas y evitar repetición de código
 function agregarFilaATabla(nombre, nacionalidad) {
     const cuerpoTabla = document.getElementById('cuerpo-tabla');
     const fila = document.createElement('tr');
@@ -40,6 +42,7 @@ function agregarFilaATabla(nombre, nacionalidad) {
     cuerpoTabla.appendChild(fila);
 }
 
+//Función para agregar un autor al localStorage en la memoria local
 function agregarAutor(){
     const nombreInput = document.getElementById('nombre').value;
     const nacionalidadInput = document.getElementById('nacionalidad').value;
@@ -79,6 +82,7 @@ function agregarAutor(){
     document.getElementById('formulario-nuevo-actor').reset();
 }
 
+//Función para limpiar el localStorage y recargar la pagina
 function limpiarAutores() {
     // 1. Borramos del almacenamiento
     localStorage.removeItem('misAutores');
